@@ -1,0 +1,152 @@
+/* font-family: 'Gasoek uOne', sans-serif;
+font-family: 'Noto Sans KR', sans-serif; */
+/* font 지정 예시 */
+header{
+    height:11rem;
+    width:50rem;
+    padding-top: 0.01rem;
+    margin:auto;
+    border-radius: 2rem;
+    background: linear-gradient(145deg, #cacaca, #f0f0f0);
+    box-shadow:  20px 20px 60px #bebebe,
+    -20px -20px 60px #ffffff;}
+.title{
+    font-weight:lighter; 
+    font-size: 4rem; 
+    text-align: center; 
+    line-height: 4rem;
+    font-family: 'Gasoek One', sans-serif;}
+.contact{
+    text-align:center; 
+    line-height: 0px; 
+    font-family: 'Noto Sans KR', sans-serif;}
+/* 상단 부분 css  */
+
+/* schedule 부분 css */
+.infos{
+    margin:2rem;
+    height:28rem;
+    display: flex;
+    flex-direction: row;}
+.tableid{font-family: 'Gasoek One', sans-serif; font-size: 2rem;}
+.timelable{font-family: 'Gasoek One', sans-serif;font-size: 1.2rem;}
+.subjects{font-weight: bold;
+    font-family: 'Noto Sans KR', sans-serif;}
+.schedule{
+    width:25rem;
+    height: 24rem;
+    padding:1rem;
+    margin:auto;
+    border-radius: 2rem;
+    background: linear-gradient(145deg, #cacaca, #f0f0f0);
+    box-shadow:  20px 20px 60px #bebebe,
+    -20px -20px 60px #ffffff;
+    }
+th,td{border:0.25rem solid black;}
+table{border:0.25rem solid black;border-radius: 1rem;}
+
+/* cafeteria 부분 css */
+.cafeteria{
+    width:25rem;
+    height: 24rem;
+    padding:1rem;
+    margin: auto;
+    border-radius: 2rem;
+    background: linear-gradient(145deg, #cacaca, #f0f0f0);
+    box-shadow:  20px 20px 60px #bebebe,
+    -20px -20px 60px #ffffff;}
+.cafeid{font-family: 'Gasoek One', sans-serif; text-align: center; font-size: 2rem;}
+.cafevalue{font-family: 'Noto Sans KR', sans-serif; 
+    font-weight: bold; 
+    border-radius: 4rem; 
+    text-align: center;}
+
+.menubutton{
+    justify-content: center; 
+    align-items: center; 
+    border-radius: 1rem;
+    background: #0064ff;
+    box-shadow:  -20px -20px 60px #0066ff37, 20px 20px 60px #0066ff37; 
+    width: 8rem; 
+    margin: auto;
+    height: 2.5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* for mobile phone */
+
+@media (max-width: 768px) {
+header{
+    height:8rem;
+    width:20rem;
+    margin:auto;
+    border-radius: 2rem;
+    background: linear-gradient(145deg, #cacaca, #f0f0f0);
+    box-shadow:  20px 20px 60px #bebebe,
+    -20px -20px 60px #ffffff;}
+.title{
+    font-weight: lighter; 
+    font-size: 2rem; 
+    text-align: center; 
+    line-height: 4rem;
+    font-family: 'Gasoek One', sans-serif;}
+.contact{
+    text-align:center; 
+    font-size: 0.8rem;
+    line-height: 0px; 
+    font-family: 'Noto Sans KR', sans-serif;}
+/* 상단 부분 css  */
+
+/* schedule 부분 css */
+.infos{
+    margin:auto;
+    height:60rem;
+    display: flex;
+    flex-direction: column;}
+.tableid{font-family: 'Gasoek One', sans-serif; font-size: 2rem;}
+.timelable{font-family: 'Gasoek One', sans-serif;font-size: 1.2rem;}
+.subjects{font-weight: bold;
+    font-family: 'Noto Sans KR', sans-serif;}
+.schedule{
+    width:20rem;
+    height: 24rem;
+    padding:1rem;
+    margin:auto;
+    border-radius: 2rem;
+    background: linear-gradient(145deg, #cacaca, #f0f0f0);
+    box-shadow:  20px 20px 60px #bebebe,
+    -20px -20px 60px #ffffff;
+    }
+th,td{border:0.25rem solid black;}
+table{border:0.25rem solid black;border-radius: 1rem;}
+
+/* cafeteria 부분 css */
+.cafeteria{
+    width:20rem;
+    height: 24rem;
+    padding:1rem;
+    margin: auto;
+    border-radius: 2rem;
+    background: linear-gradient(145deg, #cacaca, #f0f0f0);
+    box-shadow:  20px 20px 60px #bebebe,
+    -20px -20px 60px #ffffff;}
+.cafeid{font-family: 'Gasoek One', sans-serif; text-align: center; font-size: 2rem;}
+.cafevalue{font-family: 'Noto Sans KR', sans-serif; 
+    font-weight: bold; 
+    border-radius: 4rem; 
+    text-align: center;}
+
+}
+
+.menubutton{
+    justify-content: center; 
+    align-items: center; 
+    border-radius: 1rem;
+    background: #0064ff;
+    box-shadow:  -20px -20px 60px #0066ff37, 20px 20px 60px #0066ff37; width: 8rem; margin: auto; height: 2.5rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}

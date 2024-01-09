@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>서울고 TestPage</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gasoek+One&family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="icon" href="https://i.namu.wiki/i/zj6BK9c3anmQq2bRMxO1aIsTsg9XRXm_EQCrlvw1L53CPohAQPeEJ0rZS6ax1KuI-gk5kS2J72dWTaJa04auJQ.webp" type="image/x-icon">
+    <meta property="og:image" content="https://i.namu.wiki/i/zj6BK9c3anmQq2bRMxO1aIsTsg9XRXm_EQCrlvw1L53CPohAQPeEJ0rZS6ax1KuI-gk5kS2J72dWTaJa04auJQ.webp" />
+    <link rel="stylesheet" href="style.css">    
+    <script
+    src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+    crossorigin="anonymous">
+    </script>
+</head>
+<body style="background-color: #e0e5ec;">
+    <script>
+
+    </script>
+    <header>
+        <h1 class="title">2024 서울고 Test</h1>
+        <p class="contact"><b>Bug report:</b> ehdrjs13@kakao.com</p>
+    </header>
+    <main>
+        <div class="infos">
+            <div class="schedule">
+                <table style="margin: auto;">
+                    <p style="text-align: center; line-height: 1px;"; class="tableid"; id = "todayschedule">오늘의 시간표</p>
+                    <tr>
+                        <td class="timelable">1교시</td>
+                        <td class="subjects" id="1st">로딩중</td>
+                    </tr>
+                    <tr>
+                        <td class="timelable" >2교시</td>
+                        <td class="subjects" id="2nd">로딩중</td>
+                    </tr>
+                    <tr>
+                        <td class="timelable">3교시</td>
+                        <td class="subjects" id="3rd">로딩중</td>
+                    </tr>
+                    <tr>
+                        <td class="timelable">4교시</td>
+                        <td class="subjects" id="4th">로딩중</td>
+                    </tr>
+                    <tr>
+                        <td class="timelable">5교시</td>
+                        <td class="subjects" id="5th">로딩중</td>
+                    </tr>
+                    <tr>
+                        <td class="timelable">6교시</td>
+                        <td class="subjects" id="6th">로딩중</td>
+                    </tr>
+                    <tr>
+                        <td class="timelable">7교시</td>
+                        <td class="subjects"id="7th">로딩중</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="cafeteria">
+                <p class="cafeid"; id = 'todaymenus'>오늘의 급식</p>
+                <div class="cafevalue">
+                    <p id="cafe">
+                        급식 로딩중..
+                    </p>
+                    <div class="menubutton" id = 'nextDay' onclick="nextDay()">
+                        <p class="cafevalue" id= 'nextmenu' style="margin: auto; font-size: 0.75rem; color: #FFFF00;"><b>다음 날 급식 보기</b></p>  
+                    </div>
+                    <div class= "menubutton" id = 'formerDay' onclick="formerDay()" style="position: relative; top: 0.5rem;">
+                        <p class="cafevalue" id= 'dinner' style="margin: auto; font-size: 0.75rem; color: #FFFF00;"><b>전날 급식 보기</b></p>  
+                    </div>
+
+                    <!-- 앱 다운로드 버튼 -->
+                    <!-- <div class= "menubutton" onclick="window.open('https://bit.ly/shs108app')" style="position: relative; top: 0.5rem;">
+                        <p class="cafevalue" id= 'dinner' style="margin: auto; font-size: 0.75rem; color: #FFFF00;"><b>앱 다운로드하기</b></p>  
+                    </div> -->
+                    
+                </div>
+            </div>
+        </div>
+        
+    </main>
+    <script src = 'script.js'></script>
+</body>
+</html>
