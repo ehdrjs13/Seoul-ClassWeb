@@ -11,13 +11,6 @@ class Schedule():
             ('MON', 5, '창체'),
             ('MON', 6, '창체'),
             ('MON', 7, '창체'),
-            ('MON', 1, '창체'),
-            ('MON', 2, '창체'),
-            ('MON', 3, '창체'),
-            ('MON', 4, '창체'),
-            ('MON', 5, '창체'),
-            ('MON', 6, '창체'),
-            ('MON', 7, '창체'),
 
             ('THU', 1, '창체'),
             ('THU', 2, '창체'),
@@ -52,8 +45,9 @@ class Schedule():
             ('FRI', 7, '창체'),
         ]
 
-        self.con = sqlite3.connect('./schedule.db')
+        self.con = sqlite3.connect('./schedule.db', check_same_thread=False)
         self.cur = self.con.cursor()
+        self.cur.execute("DROP TABLE IF EXISTS Schedule")
         self.cur.execute("CREATE TABLE IF NOT EXISTS Schedule(DAY text, TIME number, Content text, Detail text)")
         self.cur.executemany("INSERT INTO Schedule (DAY, TIME, Content) VALUES(?,?,?)", default_schedule) #
 
@@ -61,13 +55,15 @@ class Schedule():
         return None
 
     def modContent(self, pos, content) -> None:
-        self.cur.execute("UPDATE Schedule SET Content = %s WHERE DAY = %s AND TIME = %d" % content, (pos[0], pos[1]))
+        self.cur.execute("UPDATE Schedule SET Content = ? WHERE DAY = ?  AND TIME = ? ", (content, pos[0], pos[1]))
         
         self.con.commit()
-        # self.con.close() 구조가 맞는지 모르겠다.. 테스트해보기
         return None
     
-    def getContent(self,pos) -> tuple: 
-        self.cur.execute("SELECT Content, Detail FROM Schedule WHERE DAY = %s AND TIME = %s" % (pos[0], pos[1]))
+    def getContent(self, pos) -> tuple: 
+        self.cur.execute("SELECT Content, Detail FROM Schedule WHERE DAY = ? AND TIME = ? ", (pos[0], pos[1]))
+        
+        data = self.cur.fetchall()
 
-        return self.cur
+        return data[0]
+    

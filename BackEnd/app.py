@@ -1,5 +1,6 @@
 from flask import Flask, render_template, request
 from ScheduleMgmt import Schedule
+from ast import literal_eval
 
 mgmt = Schedule()
 
@@ -11,19 +12,20 @@ def main():
     
 @app.route('/modSchedule')
 def modSchedule():
-    position = request.args.get('position') #pos: tuple(DAY:str,TIME:int)
+    position = literal_eval(request.args.get('position')) #pos: tuple(DAY:str,TIME:int)
     content = request.args.get('content') #content: str
 
     mgmt.modContent(position,content)
-    return f"Moded Schedule: {position[0],position[1],content}"
+    return f"Moded Schedule: content"
+#안정화 됐으니 수정해봅시다
 
 @app.route('/getSchedule')
 def getSchedule():
-    position = request.args.get('position') #pos: tuple(DAY:str,TIME:int)
+    position = literal_eval(request.args.get('position')) #pos: tuple(DAY:str,TIME:int)
 
-    content = mgmt.getContent(position)
+    content = str(mgmt.getContent(position))
 
-    return (position,content)
+    return content
 
 if __name__ == '__main__':
     app.run(debug=True)
