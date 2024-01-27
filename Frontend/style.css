@@ -1,0 +1,164 @@
+@font-face {
+    font-family: 'Caterbury';
+    src: url('font/Canterbury.ttf');
+
+    font-family: 'SDGodic';
+    src: url('font/AppleSDGothicNeoM.ttf');
+
+    font-family: 'SDGodicH';
+    src: url('font/AppleSDGothicNeoH.ttf')
+}
+
+#logo {
+    margin-top: 1.00em;
+    width: 20em;
+    position: absolute;
+    left: 5em;
+    margin-left: 20px;
+}
+
+body {
+    display: grid;
+    grid-template-columns: 70em 20em;
+    grid-template-rows: 20% 70% 10%;
+
+}
+
+#dashboardText {
+    margin-top: 20px;
+    margin-left: 40px;
+    font-family: 'SDGodicH';
+    font-size: 3em;
+    font-weight: 700;
+
+}
+
+.dashboard {
+    border-radius: 1.5em;
+    margin: auto;
+
+
+    margin-right: 60px;
+
+    height: 36rem;
+    width: 90%;
+
+    border-radius: 23px;
+background: #dedede;
+box-shadow:  20px 20px 100px #686868,
+             -20px -20px 100px #ffffff;
+
+
+}
+
+#dashboardContent {
+
+    display: flex;
+    flex-direction: row;
+}
+
+.dashboardItem {
+
+    /* 약간의 수정 필요할듯(간격 안 맞는거) */
+    margin: auto;
+    margin-top: -1.8em;
+    width: 18em;
+    height: 25em;
+
+    display: grid;
+    grid-template-rows: 15% 80%;
+
+    /* Neumophism */
+    border-radius: 23px;
+    background: #dedede;
+    box-shadow:  20px 20px 100px #a4a4a4,
+             -20px -20px 100px #ffffff;
+}
+
+.dashboardItemTitle {
+    text-align: center;
+    margin-top: 40px;
+    font-family: 'SDGodicH';
+    font-size: 1.5em;
+    font-weight: 600;
+}
+
+#scheduleContent {
+    padding: auto;
+    padding-top: 3%;
+}
+
+/* 시간표 테이블임 */
+#sctable {
+    border-spacing: 10px;
+}
+
+
+
+
+#monthMarker{
+
+}
+
+
+
+
+.cafevalue {
+    margin-top: 1.5em;
+    font-family: 'SDGidicH';
+    font-weight: bold;
+    border-radius: 4rem;
+    text-align: center;
+}
+
+.menubutton {
+    justify-content: center;
+    align-items: center;
+    border-radius: 1rem;
+    background: #0064ff;
+    box-shadow: -10px -10px 20px #0066ff37, 10px 10px 20px #0066ff37;
+    width: 8rem;
+    margin: auto;
+    height: 2.5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+
+.widget {
+
+
+    margin-left: 0.1px;
+
+    width: 80%;
+    height: 36rem;
+
+    border-radius: 23px;
+    background: #e6ff8a;
+    box-shadow:  10px 10px 50px #c4d975,
+             -10px -10px 50px #ffff9f;
+
+    display: flex;
+    flex-direction: column;
+}
+
+#widgetText {
+    margin-top: 20px;
+    margin-left: 20px;
+    font-family: 'SDGodic';
+    font-size: 1.5em;
+    font-weight: 700;
+}
+
+.widgetItem{
+    margin: auto;
+    width: 90%;
+    height: 30%;
+
+    border-radius: 50px;
+background: #dfdddd;
+box-shadow:  5px 5px 10px #bebcbc,
+             -5px -5px 10px #fffefe;
+}

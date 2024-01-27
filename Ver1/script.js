@@ -150,7 +150,7 @@ function nextDay(){
     if(currentDayIndex == 5){
         currentDayIndex = 1;
         today = String(Number(today) + 3);
-        console.log('금요일임ㅅㄱ');
+        console.log('금요일');
         console.log(today)
     } else{
         currentDayIndex = currentDayIndex + 1;
@@ -169,7 +169,7 @@ function formerDay(){
     if(currentDayIndex == 1){
         currentDayIndex = 5;
         today = String(Number(today) - 3);
-        console.log('월요일임ㅅㄱ');
+        console.log('월요일');
         console.log(today)
     } else{
         currentDayIndex = currentDayIndex - 1;
