@@ -71,8 +71,8 @@ box-shadow:  20px 20px 100px #686868,
     /* Neumophism */
     border-radius: 23px;
     background: #dedede;
-    box-shadow:  20px 20px 100px #a4a4a4,
-             -20px -20px 100px #ffffff;
+    box-shadow:  5px 5px 10px #a4a4a4,
+             -5px -5px 10px #ffffff;
 }
 
 .dashboardItemTitle {
@@ -85,16 +85,27 @@ box-shadow:  20px 20px 100px #686868,
 
 #scheduleContent {
     padding: auto;
-    padding-top: 3%;
+    padding-top: 3em;
 }
 
 /* 시간표 테이블임 */
 #sctable {
+    border-collapse: collapse;
     border-spacing: 10px;
+    
 }
 
+.timelable{
+    border-bottom: 1px solid black;
+    font-family: 'SDGodic';
+    padding-right: 10px;    
+}
 
-
+.subjects{
+    border-bottom: 1px solid black;
+    font-family: 'SDGodic';
+    text-align: center;
+}
 
 #monthMarker{
 
@@ -158,7 +169,108 @@ box-shadow:  20px 20px 100px #686868,
     height: 30%;
 
     border-radius: 50px;
-background: #dfdddd;
-box-shadow:  5px 5px 10px #bebcbc,
+    background: #dfdddd;
+    box-shadow:  5px 5px 10px #bebcbc,
              -5px -5px 10px #fffefe;
+}
+
+
+#mobileWeather{
+    display: none;
+}
+
+
+
+@media (max-width : 769px){
+    body{
+        display:grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 15% 80% 5%;
+
+
+    }
+    .header{
+        
+    }
+    #logo{
+        left: 0em;
+        margin-top: 1em;
+        width:14em;
+    }
+
+    #dashboardText{
+        font-size: 1.5em;
+        margin-bottom: -5px;
+
+    }
+
+    .dashboard{
+        margin-top:1.5em;
+        margin-bottom: -0.8em;
+        width:100%;
+        height: 125%;
+
+
+    }
+    
+    #dashboardContent{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows:14em 14em;
+        row-gap: 20px;
+        column-gap: 20px;
+        padding: 10px;
+    }
+    .dashboardItemTitle{
+        margin-top: 15px;
+        
+        font-size: 1.0em;
+    }
+    
+    #scheduleContent {
+        padding: auto;
+        padding-top: 1em;
+    }
+    
+    .dashboardItem{
+        margin: 0em;
+        width: auto;
+        height: auto;
+
+        border-radius: 23px;
+        background: #dedede;
+        box-shadow:  5px 5px 10px #a4a4a4,
+                 -5px -5px 10px #ffffff;
+    }
+    
+    #sctable{
+        border-collapse: collapse;
+        border-spacing: 10px;
+    }
+
+    .timelable{
+        border-bottom: 1px solid gray;
+        font-family: 'SDGodic';
+        font-size: 15px;
+    }
+
+    .subjects{
+        border-bottom: 1px solid gray;
+        font-family: 'SDGodic';
+        font-size: 12px;
+    }
+
+
+    .config{
+        display: none;
+    }
+    
+    #mobileWeather{
+        display: flex;
+    }
+    
+    .widget{
+        display: none;
+    }
+
 }
