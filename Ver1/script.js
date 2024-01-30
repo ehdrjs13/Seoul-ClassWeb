@@ -2,17 +2,18 @@ let formerDayButton = document.getElementById('formerDay')
 let nextDayButton = document.getElementById('nextDay')
 
 formerDayButton.addEventListener('touchstart', function(){
-    this.style.backgroundColor = '#0066ff60';
+    console.log('click!');
+    this.style.backgroundColor = '#607b00';
 });
 formerDayButton.addEventListener('touchend', function(){
-    this.style.backgroundColor = '#0064ff';
+    this.style.backgroundColor = '#c8ff00';
 });
 
 nextDayButton.addEventListener('touchstart', function(){
-    this.style.backgroundColor = '#0066ff60';
+    this.style.backgroundColor = '#607b00';
 });
 nextDayButton.addEventListener('touchend', function(){
-    this.style.backgroundColor = '#0064ff';
+    this.style.backgroundColor = '#c8ff00';
 });
 
 //init date setting

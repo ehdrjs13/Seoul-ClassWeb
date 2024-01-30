@@ -103,7 +103,7 @@ box-shadow:  20px 20px 100px #686868,
 
 .subjects{
     border-bottom: 1px solid black;
-    font-family: 'SDGodic';
+    font-family: 'SDGodicH';
     text-align: center;
 }
 
@@ -115,22 +115,34 @@ box-shadow:  20px 20px 100px #686868,
 
 
 .cafevalue {
-    margin-top: 1.5em;
+    margin-top: 2em;;
     font-family: 'SDGidicH';
     font-weight: bold;
     border-radius: 4rem;
     text-align: center;
+    
+    display: grid;
+    grid-template-rows: 80% 20%;
+}
+#cafe{
+    font-family: 'SDGodic';
+    font-weight: bold;
+}
+
+#switchButton{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 }
 
 .menubutton {
     justify-content: center;
     align-items: center;
     border-radius: 1rem;
-    background: #0064ff;
-    box-shadow: -10px -10px 20px #0066ff37, 10px 10px 20px #0066ff37;
-    width: 8rem;
+    background: #c8ff00;
+    box-shadow: -5px -5px 10px #c4d975, 5px 5px 10px #ffff9f;
+    width: 3rem;
     margin: auto;
-    height: 2.5rem;
+    height: 3rem;
     display: flex;
     flex-direction: column;
 }
@@ -199,8 +211,8 @@ box-shadow:  20px 20px 100px #686868,
     }
 
     #dashboardText{
-        font-size: 1.5em;
-        margin-bottom: -5px;
+        font-size: 1em;
+        margin-bottom: 0px;
 
     }
 
@@ -244,30 +256,109 @@ box-shadow:  20px 20px 100px #686868,
     }
     
     #sctable{
+
         border-collapse: collapse;
         border-spacing: 10px;
     }
 
     .timelable{
         border-bottom: 1px solid gray;
-        font-family: 'SDGodic';
-        font-size: 15px;
+        font-size: 12px;
     }
 
     .subjects{
         border-bottom: 1px solid gray;
-        font-family: 'SDGodic';
         font-size: 12px;
     }
+
+
+    .cafevalue {
+        margin-top: 1em;
+        font-family: 'SDGidicH';
+        font-weight: bold;
+        border-radius: 4rem;
+        text-align: center;
+        
+        display: grid;
+        grid-template-rows: 80% 20%;
+    }
+
+    #cafe{
+        font-family: 'SDGodic';
+        font-size: 70%;
+    }
+
+    #switchButton{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    .menubutton {
+        justify-content: center;
+        align-items: center;
+        border-radius: 0.7rem;
+        background: #c8ff00;
+        box-shadow: -5px -5px 10px #c4d975, 5px 5px 10px #ffff9f;
+        width: 2rem;
+        margin: auto;
+        height: 2rem;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    #weathericon{
+        width: 4em;
+        margin: 0 auto;
+        margin-top: 1em;
+    }
+    
+    #weatherDetail{
+        font-family: 'SDGodic';
+        font-weight: bold;
+        font-size: 0.7em;
+        text-align: center;
+        margin: 0 auto;
+
+    }
+
+    #mobileWeather{
+        display: grid;
+        grid-template-rows: 15% 40% 45%;
+
+    }
+
+    #avgTemp{
+        text-align: center;
+        margin: 0 auto;
+        font-size: 3em;
+        font-family: 'SDGodicH';
+        margin-top: -0.3em;
+        
+    }
+    /* #subTempDiv{
+        display: flex;
+        align-items: center;
+        margin: 0 auto;
+        margin-top: -3em;
+    }
+
+    .subTemp{
+        text-align: center;
+        font-family: 'SDGodic';
+        font-weight: bold;
+        font-size: 1em;
+
+        
+    } */
+
+
 
 
     .config{
         display: none;
     }
     
-    #mobileWeather{
-        display: flex;
-    }
+
     
     .widget{
         display: none;

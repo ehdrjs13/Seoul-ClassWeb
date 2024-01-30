@@ -6,9 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Seoul High 2024</title>
     <link rel="stylesheet" href="style.css">
+    <script
+    src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+    crossorigin="anonymous">
+    </script>
 </head>
 
-<body>
+<body oncontextmenu="return false" ondragstart="return false" onselectstart="return false">
     <div class='header'>
         <div class='titleZone'>
             <img id=logo src="content/logo.png">
@@ -65,27 +70,40 @@
 
             <div class='dashboardItem' id='Calendar'>
                 <p class = 'dashboardItemTitle' id = 'monthMarker'>학사일정</p>
+                (2) 겨울 방학
             </div>
-
+            <!-- 모바일용 날씨  -->
             <div class = 'dashboardItem' id = 'mobileWeather'>
-모바일용 날씨
+                <p class='dashboardItemTitle' id='menuTitle'>오늘의 날씨</p>
+
+                <img src="content/weather/iconmonstr-weather-12.svg" id = 'weathericon'>
+                    <!-- js 아이콘 변경 -->
+                <div style="display: flex; flex-direction: column; border: 1px;">
+                <p id = 'avgTemp'>-5°</p>
+                <!-- 양수일때 &nbsp; -->
+                <p id = 'weatherDetail'>구름이 많아요. </p>
+                <!-- 여러 가지 문구 중 random으로 맞춰서 -->
+                </div>
+
+                
+
             </div>
 
             <div class='dashboardItem' id='menu'>
                 <p class='dashboardItemTitle' id='menuTitle'>오늘의 급식</p>
                 <div class="cafevalue">
                     <p id="cafe">
-                        급식 Content
+                        흑미밥
                     </p>
-                    <div class="menubutton" id='nextDay' onclick="nextDay()">
-                        <p class="cafevalue" id='nextmenu' style="margin: auto; font-size: 0.75rem; color: #FFFF00;">
-                            <b>다음 날 급식 보기</b></p>
-                    </div>
-                    <div class="menubutton" id='formerDay' onclick="formerDay()"
-                        style="position: relative; top: 0.5rem;">
-                        <p class="cafevalue" id='dinner' style="margin: auto; font-size: 0.75rem; color: #FFFF00;"><b>전날
-                                급식 보기</b></p>
-                    </div>
+                    <div id = 'switchButton'>
+                        <div class="menubutton" id='nextDay' onclick="nextDay()">
+                            <img src="content/arrowleft.png" alt="" style="width: 1em;">
+                        </div>
+                        <div class="menubutton" id='formerDay' onclick="formerDay()">
+                            <img src="content/arrowright.png" alt="" style="width: 1em;">
+                        </div>
+                </div>
+                    
 
                 </div>
             </div>
@@ -109,7 +127,7 @@
     </div>
 
 
-
+    <script src = 'script.js'></script>
 </body>
 
 </html>
