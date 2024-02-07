@@ -11,6 +11,7 @@
     integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
     crossorigin="anonymous">
     </script>
+
 </head>
 
 <body oncontextmenu="return false" ondragstart="return false" onselectstart="return false">
@@ -74,7 +75,7 @@
             </div>
             <!-- 모바일용 날씨  -->
             <div class = 'dashboardItem' id = 'mobileWeather'>
-                <p class='dashboardItemTitle' id='menuTitle'>오늘의 날씨</p>
+                <p class='dashboardItemTitle' id='mobileWeatherTitle'>오늘의 날씨</p>
 
                 <img src="content/weather/iconmonstr-weather-12.svg" id = 'weathericon'>
                     <!-- js 아이콘 변경 -->
@@ -96,10 +97,10 @@
                         흑미밥
                     </p>
                     <div id = 'switchButton'>
-                        <div class="menubutton" id='nextDay' onclick="nextDay()">
+                        <div class="menubutton" id='formerDay' onclick="formerDay()">
                             <img src="content/arrowleft.png" alt="" style="width: 1em;">
                         </div>
-                        <div class="menubutton" id='formerDay' onclick="formerDay()">
+                        <div class="menubutton" id='nextDay' onclick="nextDay()">
                             <img src="content/arrowright.png" alt="" style="width: 1em;">
                         </div>
                 </div>
@@ -127,7 +128,8 @@
     </div>
 
 
-    <script src = 'script.js'></script>
+    <script src = 'script/script.js'></script>
+    
 </body>
 
 </html>

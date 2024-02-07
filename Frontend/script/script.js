@@ -1,4 +1,5 @@
 //init date setting
+
 let currentDate = new Date();
 let year = currentDate.getFullYear();
 let month = String(currentDate.getMonth() + 1).padStart(2, '0');
@@ -72,6 +73,12 @@ function getMenu(){
 
 
 function nextDay(){
+    if(Number(today.substring(6, 8)) >= 32
+    ){
+        alert('해당 달의 급식만 확인 가능합니다.  ')
+        return;
+    }
+
     if(currentDayIndex == 5){
         currentDayIndex = 1;
         today = String(Number(today) + 3);
@@ -81,16 +88,30 @@ function nextDay(){
         currentDayIndex = currentDayIndex + 1;
         today = String(Number(today) + 1)
     };
+
     if(Number(today.substring(6, 8)) >= 32
     ){
         alert('해당 달의 급식만 확인 가능합니다.  ')
+        return;
     }
     let daymod = today.substring(6,8);
     let monthmod = today.substring(4,6);
+
+    console.log('NEXTDAY:', daymod,monthmod);
+
+
     
     getMenu()
+
+    document.getElementById('menuTitle').innerHTML = 
+    (monthmod.replace('0', '')+'월'+daymod.replace(/(^0+)/, "")+'일 급식')
 };
 function formerDay(){
+    if(Number(today.substring(6, 8)) <= 0){
+        alert('해당 달의 급식만 확인 가능합니다.  ')
+        return;
+    }
+
     if(currentDayIndex == 1){
         currentDayIndex = 5;
         today = String(Number(today) - 3);
@@ -100,14 +121,21 @@ function formerDay(){
         currentDayIndex = currentDayIndex - 1;
         today = String(Number(today) - 1)
     };
-    if(Number(today.substring(6, 8)) >= 32
-    ){
+    if(Number(today.substring(6, 8)) <= 0){
         alert('해당 달의 급식만 확인 가능합니다.  ')
+        return;
     }
+
+    console.log('변경:', today);
     let daymod = today.substring(6,8);
     let monthmod = today.substring(4,6);
+
+    console.log('FORMERDAY:', daymod,monthmod);
     
     getMenu()
+
+    document.getElementById('menuTitle').innerHTML = 
+    (monthmod.replace('0', '')+'월'+daymod.replace(/(^0+)/, "")+'일 급식')
 };
 
 //Button Click Effect
@@ -130,13 +158,18 @@ nextDayButton.addEventListener('touchend', function(){
 });
 
 
+function getWeather{
+    
+}
 
 
-//시간표 가져오기
 
 
 
 
 
-getMenu()
+
+
+//Main Init:
+getMenu();
 

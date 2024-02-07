@@ -9,7 +9,10 @@ app = Flask(__name__)
 @app.route('/')
 def main():
     return render_template('index.html')
-    
+
+######### Data Call & Fetch Guide
+#MODSCHEDULE: /modSchedule?position=('MON',2)&content=('str')
+#GETSCHEDULE: /getSchedule?position=('MON',2)
 @app.route('/modSchedule')
 def modSchedule():
     position = literal_eval(request.args.get('position')) #pos: tuple(DAY:str,TIME:int)
