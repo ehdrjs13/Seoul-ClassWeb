@@ -1,14 +1,16 @@
 from flask import Flask, render_template, request
 from ScheduleMgmt import Schedule
+from flask_cors import CORS
 from ast import literal_eval
 
 mgmt = Schedule()
 
 app = Flask(__name__)
+CORS(app)
 
 @app.route('/')
 def main():
-    return render_template('index.html')
+    return 'SHS server'
 
 ######### Data Call & Fetch Guide
 #MODSCHEDULE: /modSchedule?position=('MON',2)&content=('str')
@@ -31,7 +33,7 @@ def getSchedule():
     return content
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(port=200, debug=True)
     
     
     

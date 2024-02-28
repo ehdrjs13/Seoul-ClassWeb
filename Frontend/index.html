@@ -5,7 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Seoul High 2024</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/style_mobile.css">
+
     <script
     src="https://code.jquery.com/jquery-3.4.1.min.js"
     integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
@@ -77,10 +79,10 @@
             <div class = 'dashboardItem' id = 'mobileWeather'>
                 <p class='dashboardItemTitle' id='mobileWeatherTitle'>오늘의 날씨</p>
 
-                <img src="content/weather/iconmonstr-weather-12.svg" id = 'weathericon'>
+                <img src="content/weather/sunny.svg" id = 'weathericon'>
                     <!-- js 아이콘 변경 -->
                 <div style="display: flex; flex-direction: column; border: 1px;">
-                <p id = 'avgTemp'>-5°</p>
+                <p id = 'avgTemp'></p>
                 <!-- 양수일때 &nbsp; -->
                 <p id = 'weatherDetail'>구름이 많아요. </p>
                 <!-- 여러 가지 문구 중 random으로 맞춰서 -->
@@ -129,6 +131,9 @@
 
 
     <script src = 'script/script.js'></script>
+    <script src =   'script/getMenu.js'></script>
+    <script src = 'script/getWeather.js'></script>
+    <script src = 'script/getSchedule.js'></script>
     
 </body>
 
