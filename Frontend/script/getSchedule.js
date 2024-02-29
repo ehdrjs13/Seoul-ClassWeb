@@ -5,7 +5,7 @@ function getSchedule(){
 
 
 
-    fetch("https://seoul-server.run.goorm.io:443/getSchedule?position=('${dayIndex}',${timeIndex})",{method: 'GET',
+    fetch("http://127.0.0.1:200/getSchedule?position=('${dayIndex}',${timeIndex})",{method: 'GET',
     mode: 'cors'})
     .then(response => {
         console.log(response);
