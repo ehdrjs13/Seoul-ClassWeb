@@ -64,29 +64,31 @@ class ScheduleMgmt {
     }
 
     getSchedule(day, time, callback){
-        console.log(day,time);
+  
 
         this.db.all("SELECT Content, Detail FROM Schedule WHERE DAY = ? AND TIME = ? ", day, time, (err, rows) => {
             if (err){
                 console.log('ERROR',err);
                 callback(err);
             } else {
+
                 callback(rows);
             }
         });
     }
 
 
-    modSchedule(day,time,content,callback){
-        this.db.run("UPDATE Schedule SET Content = ? WHERE DAY = ?  AND TIME = ?",content,day,time, (err) =>{
-            if(err){
-                callback(err,null);
+    modSchedule(day, time, content, callback) {
+        this.db.run("UPDATE Schedule SET Content = ? WHERE DAY = ?  AND TIME = ?", content, day, time, (err) => {
+            if (err) {
+                callback(err, null);
             } else {
-                callback('Update Success.')
+
+                this.getSchedule(day, time, (rows) => {
+                    callback(rows);
+                });
             }
-
-        })
-
+        });
     }
 
 }
@@ -99,20 +101,20 @@ module.exports = ScheduleMgmt;
 
 // //테스트 시퀀스
 
-const scheduleMgmt = new ScheduleMgmt();
+// const scheduleMgmt = new ScheduleMgmt();
 
-setTimeout(function() {
-    scheduleMgmt.modSchedule('mon', 1, '물리학',(err, data) => {
-        setTimeout(function() {
-            scheduleMgmt.getSchedule('mon', 1, (err, data) => {
-                console.log('DATA:', data);
-        });
+// setTimeout(function() {
+//     scheduleMgmt.modSchedule('mon', 1, '화학1',(err, data) => {
+//         setTimeout(function() {
+//             scheduleMgmt.getSchedule('mon', 1, (data) => {
+//                 console.log('DATA:',data);
+//         });
             
-        }, 30);
+//         }, 30);
 
-});
+// });
     
-}, 100);
+// }, 100);
 
 
 
