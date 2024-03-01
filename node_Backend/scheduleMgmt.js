@@ -91,6 +91,20 @@ class ScheduleMgmt {
         });
     }
 
+    getAllSchedule(day, callback){
+  
+
+        this.db.all("SELECT DAY, TIME, Content, Detail FROM Schedule WHERE DAY = ? ", day, (err, rows) => {
+            if (err){
+                console.log('ERROR',err);
+                callback(err);
+            } else {
+
+                callback(rows);
+            }
+        });
+    }
+
 }
 
 
@@ -104,15 +118,15 @@ module.exports = ScheduleMgmt;
 // const scheduleMgmt = new ScheduleMgmt();
 
 // setTimeout(function() {
-//     scheduleMgmt.modSchedule('mon', 1, '화학1',(err, data) => {
-//         setTimeout(function() {
-//             scheduleMgmt.getSchedule('mon', 1, (data) => {
-//                 console.log('DATA:',data);
-//         });
-            
-//         }, 30);
+//     scheduleMgmt.getAllSchedule('mon', (res) => {
+//         console.log(res)
 
-// });
+//     })
+
+            
+//         }, 100);
+
+
     
 // }, 100);
 

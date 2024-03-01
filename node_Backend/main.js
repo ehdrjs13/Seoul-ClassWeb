@@ -2,11 +2,17 @@
 
 const ScheduleMgmt = require('./ScheduleMgmt');
 
+const cors = require('cors');
+
+
+
 const database = new ScheduleMgmt();
 
 const express = require("express");
 
 const app = express();
+
+app.use(cors())
 
 const port = 200;
 
@@ -22,6 +28,8 @@ app.get("/getSchedule", (req,res)=>{
     q = req.query;
     day = q.day;
     time = q.time;
+
+    console.log('REQUEST::',day,time);
 
 
     
@@ -61,5 +69,28 @@ app.get("/modSchedule", (req,res) => {
 
 
     
+
+});
+
+//-------------------------------------------------------
+app.get("/getAllSchedule", (req,res)=>{
+    q = req.query;
+    day = q.day;
+
+
+
+
+    
+    setTimeout(function (){
+        database.getAllSchedule(day,(content) => {
+            console.log('res:',content);
+            res.json({'day':day,'content':content,'status':'getAllSchedule'});
+
+
+        })
+
+    },100);
+
+    console.log('GET-All Success')
 
 });

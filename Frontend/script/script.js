@@ -8,7 +8,7 @@ let day = String(currentDate.getDate()).padStart(2, '0');
 currentDayIndex = currentDate.getDay(); //날짜 가져오기
 let currnentHour = currentDate.getHours();
 
-const dayName = ['SUN', 'MON', 'THU', 'WED', 'THUR', 'FRI', 'SAT'];
+const dayName = ['sun', 'mon', 'thu', 'wed', 'thur', 'fri', 'sat'];
 dayNamed = dayName[currentDayIndex] //stringfy dayIndex
 
 

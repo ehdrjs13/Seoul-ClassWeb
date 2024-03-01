@@ -44,8 +44,8 @@ body {
     width: 90%;
 
     border-radius: 23px;
-background: #dedede;
-box-shadow:  20px 20px 100px #686868,
+    background: #dedede;
+    box-shadow:  20px 20px 100px #686868,
              -20px -20px 100px #ffffff;
 
 
@@ -189,6 +189,14 @@ box-shadow:  20px 20px 100px #686868,
 
 #mobileWeather{
     display: none;
+}
+
+.eventContent{
+    text-align: center;
+    margin: auto;
+    font: 'SDGodicH';
+    font-size: 15px;
+    font-weight: bold;
 }
 
 
