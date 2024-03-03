@@ -113,7 +113,7 @@ module.exports = ScheduleMgmt;
 
 
 
-// //테스트 시퀀스
+// //Test Sequence
 
 // const scheduleMgmt = new ScheduleMgmt();
 
