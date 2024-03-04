@@ -7,7 +7,8 @@ function getWeather(){
         const weather = data.weather[0].id;
         const temp = Math.round(data.main.temp)-273;
 
-        document.getElementById('avgTemp').innerHTML = `${temp}°`
+        document.getElementById('avgTemp').innerHTML = `${temp}°`;
+        document.getElementById('avgTempPC').innerHTML = `${temp}°`;
 
         console.log(weather);
 
@@ -40,21 +41,35 @@ function getWeather(){
         switch(Indicator){
             case 0:
                 document.getElementById('weathericon').src = 'content/weather/sunny.svg';
-
+                document.getElementById('weathericonPC').src = 'content/weather/sunny.svg';
+                document.getElementById('weatherDetail').innerHTML = '꽤나 맑아요. ';
+                document.getElementById('weatherDetailPC').innerHTML = '꽤나 맑아요. ';
                 console.log('sunny!');
                 break;
 
             case 1:
-                document.getElementById('weathericon').src = 'content/weather/cloudy.svg'
+                document.getElementById('weathericon').src = 'content/weather/cloudy.svg';
+                document.getElementById('weathericonPC').src = 'content/weather/cloudy.svg';
+                document.getElementById('weatherDetail').innerHTML = '좀 흐려요. ';
+                document.getElementById('weatherDetailPC').innerHTML = '좀 흐려요.';
                 break;
             case 2:
-                document.getElementById('weathericon').src = 'content/weather/rainy.svg'
+                document.getElementById('weathericon').src = 'content/weather/rainy.svg';
+                document.getElementById('weathericonPC').src = 'content/weather/rainy.svg';
+                document.getElementById('weatherDetail').innerHTML = '우산을 챙기세요. ';
+                document.getElementById('weatherDetailPC').innerHTML = '우산을 챙기세요.';
                 break;
             case 3:
-                document.getElementById('weathericon').src = 'content/weather/snowy.svg'
+                document.getElementById('weathericon').src = 'content/weather/snowy.svg';
+                document.getElementById('weathericonPC').src = 'content/weather/snowy.svg';
+                document.getElementById('weatherDetail').innerHTML = '눈이 내려요. ';
+                document.getElementById('weatherDetailPC').innerHTML = '눈이 내려요. ';
                 break;
             case 4:
-                document.getElementById('weathericon').src = 'content/weather/error.svg'
+                document.getElementById('weathericon').src = 'content/weather/error.svg';
+                document.getElementById('weathericonPC').src = 'content/weather/error.svg';
+                document.getElementById('weatherDetail').innerHTML = '오류가 발생했어요. ';
+                document.getElementById('weatherDetailPC').innerHTML = '오류가 발생했어요.';
                 break;
         }
 

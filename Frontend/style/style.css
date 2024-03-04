@@ -199,6 +199,44 @@ body {
     font-weight: bold;
 }
 
+#weatherPC{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
 
+}
+
+#weathericonPC{
+
+    width: 10vh;
+    margin: auto;
+    margin-right: 0;
+    grid-row: span 2;
+    grid-column: 1;
+
+    
+
+}
+
+#avgTempPC{
+    margin: auto;
+    margin-bottom: -30px;
+ 
+    font-family: 'SDGodicH';
+
+    font-size: 3em;
+    
+
+    grid-column: 2;
+
+}
+
+#weatherDetailPC{
+    margin: auto;
+
+    font-family: 'SDGodicH';
+    grid-column: 2;
+    font-size: 15px;
+}
 
 
