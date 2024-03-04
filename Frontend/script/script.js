@@ -13,8 +13,8 @@ dayNamed = dayName[currentDayIndex] //stringfy dayIndex
 
 
 //yyyymmdd date code generation
-today = '20231106'
-// today = `${year}${month}${day}`;
+// today = '20231106'
+today = `${year}${month}${day}`;
 
 if(currnentHour >= 17 && currentDayIndex != 0 && currentDayIndex != 6){
     currentDayIndex = currentDayIndex + 1;
