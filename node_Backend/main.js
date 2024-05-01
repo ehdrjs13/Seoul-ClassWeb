@@ -1,6 +1,6 @@
 
 
-const ScheduleMgmt = require('./ScheduleMgmt.js');
+const ScheduleMgmt = require('./scheduleMgmt.js');
 
 const cors = require('cors');
 
