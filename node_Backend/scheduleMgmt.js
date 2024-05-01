@@ -79,6 +79,8 @@ class ScheduleMgmt {
 
 
     modSchedule(day, time, content, callback) {
+
+        
         this.db.run("UPDATE Schedule SET Content = ? WHERE DAY = ?  AND TIME = ?", content, day, time, (err) => {
             if (err) {
                 callback(err, null);

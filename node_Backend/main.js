@@ -17,7 +17,7 @@ app.use(cors())
 const port = 200;
 
 app.listen(port,( )=>{
-    console.log('Server Initialized. ');
+    console.log('Server Inited. ');
 });
 
 app.get("/",(req, res)=>{

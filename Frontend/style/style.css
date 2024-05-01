@@ -239,4 +239,33 @@ body {
     font-size: 15px;
 }
 
+#dday1{
+    display: grid;
+    grid-template-rows: 1fr 2fr;
+
+}
+
+#dday2{
+    display: grid;
+    grid-template-rows: 1fr 2fr;
+
+}
+
+.ddayTitle{
+    margin: auto;
+    font-family: SDGodicH;
+    font-size: 1.2em;
+    margin-bottom: 0;
+
+
+}
+
+.ddayContent{
+    margin: auto;
+    margin-top: 10px;
+    font-family: SDGodicH;
+    font-size: 3em;
+
+}
+
 
