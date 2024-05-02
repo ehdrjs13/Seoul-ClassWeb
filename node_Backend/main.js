@@ -72,6 +72,30 @@ app.get("/modSchedule", (req,res) => {
 
 });
 
+app.get("/modDetail", (req,res) => {
+    q = req.query
+
+    day = q.day;
+    time = q.time;
+
+
+    content = q.content;
+
+    //constructor 응답 기다리기
+    setTimeout(function (){
+        database.modDetail(day,time,content,(content) => {
+            console.log('POST')
+            res.json({'day':day,'time':time,'Detail':content,'status':'modDetail'});
+
+        })
+
+    },100)  
+
+
+    
+
+});
+
 //-------------------------------------------------------
 app.get("/getAllSchedule", (req,res)=>{
     q = req.query;

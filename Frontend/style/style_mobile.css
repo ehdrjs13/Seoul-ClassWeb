@@ -75,7 +75,9 @@
         border-bottom: 1px solid gray;
         font-size: 12px;
     }
-
+    .eventContent{
+        font-size: 17px;
+    }
 
     .cafevalue {
         margin-top: 1em;
