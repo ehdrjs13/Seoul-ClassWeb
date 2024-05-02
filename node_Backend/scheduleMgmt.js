@@ -93,6 +93,23 @@ class ScheduleMgmt {
         });
     }
 
+    modDetail(day, time, content, callback) {
+
+        
+        this.db.run("UPDATE Schedule SET Detail = ? WHERE DAY = ?  AND TIME = ?", content, day, time, (err) => {
+            if (err) {
+                callback(err, null);
+            } else {
+
+                this.getSchedule(day, time, (rows) => {
+                    callback(rows);
+                });
+            }
+        });
+    }
+
+    
+
     getAllSchedule(day, callback){
   
 

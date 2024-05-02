@@ -3,7 +3,7 @@ function getSchedule(day,time){
 
     const timeIndex = time;
 
-    console.log(dayIndex);
+    // console.log(dayIndex);
 
 
 
@@ -11,11 +11,11 @@ function getSchedule(day,time){
 
     )
     .then(response => {
-        console.log(response);
+        // console.log(response);
         return response.json(); 
     })
     .then(data => {
-            console.log(data);
+            // console.log(data);
             return data.json;
         });
             
@@ -31,7 +31,7 @@ function getAllSchedule(day){
 
     fetch(`http://35.247.56.98:200/getAllSchedule?day=${dayIndex}`)
     .then(response => {
-        console.log(response);
+        // console.log(response);
         return response.json();  
     })
     .then(data => {
@@ -69,7 +69,7 @@ function getAllSchedule(day){
                 }
             });
 
-            console.log(time1,time2,time3,time4,time5,time6,time7);
+            // console.log(time1,time2,time3,time4,time5,time6,time7);
 
             adjustScheduleTable(time1,time2,time3,time4,time5,time6,time7);
 
