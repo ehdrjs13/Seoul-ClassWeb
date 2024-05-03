@@ -14,7 +14,7 @@ const app = express();
 
 app.use(cors())
 
-const port = 220;
+const port = 200;
 
 app.listen(port,( )=>{
     console.log('Server Inited. ');
