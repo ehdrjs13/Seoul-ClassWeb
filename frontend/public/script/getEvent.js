@@ -41,7 +41,7 @@ function returnData(data) {
     return events;
 }
 
-console.log(getEvent(20240502));
+console.log(getEvent(today));
     
 
 
