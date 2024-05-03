@@ -7,7 +7,7 @@ function getSchedule(day,time){
 
 
 
-    fetch(`http://35.247.56.98:200/getAllSchedule?day=${dayIndex}&time=${timeIndex}`, 
+    fetch(`http://35.247.56.98:220/getAllSchedule?day=${dayIndex}&time=${timeIndex}`, 
 
     )
     .then(response => {
@@ -29,7 +29,7 @@ function getAllSchedule(day){
 
 
 
-    fetch(`http://35.247.56.98:200/getAllSchedule?day=${dayIndex}`)
+    fetch(`http://35.247.56.98:220/getAllSchedule?day=${dayIndex}`)
     .then(response => {
         // console.log(response);
         return response.json();  
