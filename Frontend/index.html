@@ -4,7 +4,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Seoul High 2024</title>
     <link rel="stylesheet" href="style/style.css">
     <link rel="stylesheet" href="style/style_mobile.css">
@@ -74,7 +73,7 @@
 
             <div class='dashboardItem' id='Calendar'>
                 <p class = 'dashboardItemTitle' id = 'monthMarker'>학사일정</p>
-                <p class="eventContent">Development on Progress.. <br>┗( T﹏T )┛
+                <p class="eventContent" id = 'eventList'>학사일정이 없습니다. 
                 </p>
             </div>
             <!-- 모바일용 날씨  -->
@@ -98,7 +97,7 @@
                 <p class='dashboardItemTitle' id='menuTitle'>오늘의 급식</p>
                 <div class="cafevalue">
                     <p id="cafe">
-                        흑미밥
+                        불러오는 중..
                     </p>
                     <div id = 'switchButton'>
                         <div class="menubutton" id='formerDay' onclick="formerDay()">
@@ -149,6 +148,7 @@
     <script src =   'script/getMenu.js'></script>
     <script src = 'script/getWeather.js'></script>
     <script src = 'script/getSchedule.js'></script>
+    <script src = 'script/getEvent.js'></script>
     
 </body>
 
