@@ -14,5 +14,5 @@ app.get('/', (req, res) => {
 
 
 app.listen(PORT, () => {
-  console.log(`Server Init: PORT 3000`);
+  console.log(`Server Init: PORT 80`);
 });
