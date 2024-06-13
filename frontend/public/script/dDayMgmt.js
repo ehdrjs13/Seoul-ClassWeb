@@ -1,4 +1,4 @@
-const FINAL_FIRST = new Date('2024-06-15');
+const FINAL_FIRST = new Date('2024-06-27');
 const MIDTERM_SECOND = new Date('2024-09-15');
 const FINAL_SECOND = new Date('2024-11-15');
 
